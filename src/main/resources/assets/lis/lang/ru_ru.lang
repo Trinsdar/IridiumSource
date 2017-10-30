@@ -1,0 +1,11 @@
+itemGroup.iridiumtab=Источник Иридиума
+
+item.prill_platina.name=Платиновый Самородок
+item.platina_190.name=Платина-190
+item.iridium_191.name=Иридиум-191
+item.iridium_193.name=Иридиум-193
+item.complex_compound_iridium.name=Комплексный Иридиумный Состав
+
+tile.ore_overworld_platina.name=Платиновая Руда
+tile.ore_nether_platina.name=Адская Платиновая Руда
+tile.ore_end_platina.name=Платиновая Руда Края

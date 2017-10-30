@@ -1,0 +1,6 @@
+{
+	"variants":
+	{
+		"variant=platina": {"model": "lis:ore_overworld_platina"}
+	}
+}
