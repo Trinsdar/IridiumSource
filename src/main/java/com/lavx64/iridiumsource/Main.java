@@ -1,15 +1,13 @@
 package com.lavx64.iridiumsource;
 
-import ic2.api.recipe.IRecipeInput;
-import ic2.api.recipe.Recipes;
 import com.lavx64.iridiumsource.proxy.CommonProxy;
+import com.lavx64.iridiumsource.recipes.RecipesIC2;
 import com.lavx64.iridiumsource.tabs.IridiumSourceTab;
 import com.lavx64.iridiumsource.util.Reference;
 import com.lavx64.iridiumsource.util.handlers.RegistryHandler;
-import net.minecraft.nbt.NBTTagCompound;
+
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
-import com.lavx64.iridiumsource.util.RecipesIC2;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;

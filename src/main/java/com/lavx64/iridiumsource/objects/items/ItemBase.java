@@ -14,10 +14,7 @@ public class ItemBase extends Item implements IHasModel
 	{
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		if(name != "ore_iridium")
-		{
-			setCreativeTab(Main.iridiumtab);
-		}
+		setCreativeTab(Main.iridiumtab);
 		
 		ItemInit.ITEMS.add(this);
 	}

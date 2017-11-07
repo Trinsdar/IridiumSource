@@ -1,10 +1,8 @@
 package com.lavx64.iridiumsource.tabs;
 
-import com.lavx64.iridiumsource.init.ItemInit;
-
 import ic2.api.item.IC2Items;
+
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class IridiumSourceTab extends CreativeTabs

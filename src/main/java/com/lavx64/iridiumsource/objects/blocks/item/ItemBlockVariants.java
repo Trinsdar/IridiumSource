@@ -13,6 +13,7 @@ public class ItemBlockVariants extends ItemBlock
 		setHasSubtypes(true);
 		setMaxDamage(0);
 	}
+	
 	@Override
 	public int getMetadata(int damage) {
 		return damage;
@@ -20,7 +21,6 @@ public class ItemBlockVariants extends ItemBlock
 	
 	@Override
 	public String getUnlocalizedName(ItemStack stack) {
-		// TODO Auto-generated method stub
 		return super.getUnlocalizedName() + "_" + ((IMetaName)this.block).getSpecialName(stack);
 	}
 	

@@ -1,20 +1,12 @@
-package com.lavx64.iridiumsource.util;
+package com.lavx64.iridiumsource.recipes;
 
 import com.lavx64.iridiumsource.init.BlockInit;
-import com.lavx64.iridiumsource.init.BlockOres;
 import com.lavx64.iridiumsource.init.ItemInit;
-import com.lavx64.iridiumsource.util.handlers.EnumHandler;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraftforge.client.model.ModelFluid.FluidLoader;
-import net.minecraftforge.fluids.FluidRegistry;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.FluidUtil;
-import ic2.api.recipe.Recipes;
-import ic2.api.energy.prefab.BasicSource;
+
 import ic2.api.item.IC2Items;
+import ic2.api.recipe.Recipes;
+
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

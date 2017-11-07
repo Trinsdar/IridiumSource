@@ -3,10 +3,7 @@ package com.lavx64.iridiumsource.init;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lavx64.iridiumsource.objects.blocks.BlockBase;
-
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 
 public class BlockInit {
 	public static final List<Block> BLOCKS = new ArrayList<Block>();
