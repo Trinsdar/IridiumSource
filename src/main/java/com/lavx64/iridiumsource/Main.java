@@ -9,7 +9,7 @@ import com.lavx64.iridiumsource.util.handlers.RegistryHandler;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import com.lavx64.iridiumsource.util.HelperIC2;
+import com.lavx64.iridiumsource.util.RecipesIC2;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -41,7 +41,7 @@ public class Main {
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		HelperIC2.addRecipes();
+		RecipesIC2.addRecipes();
 	}
 	
 	@EventHandler

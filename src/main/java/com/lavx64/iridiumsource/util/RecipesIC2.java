@@ -5,17 +5,21 @@ import com.lavx64.iridiumsource.init.BlockOres;
 import com.lavx64.iridiumsource.init.ItemInit;
 import com.lavx64.iridiumsource.util.handlers.EnumHandler;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.client.model.ModelFluid.FluidLoader;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.FluidStack;
+import net.minecraftforge.fluids.FluidUtil;
 import ic2.api.recipe.Recipes;
+import ic2.api.energy.prefab.BasicSource;
 import ic2.api.item.IC2Items;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-
 import net.minecraft.nbt.NBTTagCompound;
 
-public class HelperIC2 {
+public class RecipesIC2 {
 
 	/**
 
@@ -28,6 +32,7 @@ public class HelperIC2 {
 
 
     public static void addRecipes(){
+    	
     	Block ore_end_platina = BlockInit.BLOCKS.get(0);
     	Block ore_overworld_platina = BlockInit.BLOCKS.get(1);
     	Block ore_nether_platina = BlockInit.BLOCKS.get(2);
@@ -48,7 +53,7 @@ public class HelperIC2 {
     	ItemStack oreWashing_output3  = IC2Items.getItem("dust", "small_iron");
     			  oreWashing_output3.setCount(2);
     	NBTTagCompound nbto = new NBTTagCompound();
-    	nbto.setInteger("amount", 8000);
+    				   nbto.setInteger("amount", 8000);
     	
     	Recipes.oreWashing.addRecipe(oreWashing_input, nbto, false, oreWashing_output, oreWashing_output2, oreWashing_output3);
     	//Ore Washing Machine <PRILL_PLATINA> : PLATINA_190, IRIDIUM_191, 2x Tiny Pile of Iron Dust
@@ -58,7 +63,7 @@ public class HelperIC2 {
     	ItemStack centrifuge_output  = new ItemStack(ItemInit.IRIDIUM_193);
     	ItemStack centrifuge_output2  = IC2Items.getItem("dust", "small_copper");  	
     	NBTTagCompound nbtc = new NBTTagCompound();
-    	nbtc.setInteger("minHeat", 2000);
+    				   nbtc.setInteger("minHeat", 2000);
     	
     	Recipes.centrifuge.addRecipe(centrifuge_input, nbtc, false, centrifuge_output, centrifuge_output2);
     	//Thermal Centrifuge <PLATINA_190> : IRIDIUM_193, Tiny Pile of Copper Dust
@@ -68,6 +73,19 @@ public class HelperIC2 {
     	
     	Recipes.compressor.addRecipe(compressor_input, null, false, compressor_output);
     	//Compressor <COMPLEX_COMPOUND_IRIDIUM> : Iridium Shard
+    	
+    //Testing code:
+    /*	ItemStack magma = new ItemStack(Item.getItemFromBlock(Block.getBlockFromName("magma")));
+    	IC2RecipeInput magmaBlock = new IC2RecipeInput(magma);
+    	IC2RecipeInput cannerInput = new IC2RecipeInput(IC2Items.getItem("fluid_cell", "ic2pahoehoe_lava"));
+    	ItemStack cannerOutput = IC2Items.getItem("fluid_cell", "lava");
+    	Recipes.cannerBottle.addRecipe(cannerInput, magmaBlock, cannerOutput, false);
+    	//Canning Machine <UniversalCell<Pahoehoe Lava>, MAGMA BLOCK> : UniversalCell<Lava>
+    	
+    	//TODO: Ask on forum about this deprecated function
+    	Recipes.cannerEnrich.addRecipe(new FluidStack(FluidRegistry.getFluid("ic2pahoehoe_lava"), 1000), magmaBlock, new FluidStack(FluidRegistry.LAVA, 1000));
+    	//Canning Machine <Pahoehoe Lava, MAGMA BLOCK> : Lava
+    * */
     }
 
 }
