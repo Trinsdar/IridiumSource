@@ -32,13 +32,13 @@ public class WorldGenCustomOres implements IWorldGenerator
 		switch(world.provider.getDimension())
 		{
 		case -1:
-			runGenerator(ore_nether_platina, world, random, chunkX, chunkZ, 25, 0, 100);
+			runGenerator(ore_nether_platina, world, random, chunkX, chunkZ, 100, 0, 256);
 			break;
 		case 0:
-			runGenerator(ore_overworld_platina, world, random, chunkX, chunkZ, 5, 0, 15);
+			runGenerator(ore_overworld_platina, world, random, chunkX, chunkZ, 100, 0, 15);
 			break;
 		case 1:
-			runGenerator(ore_end_platina, world, random, chunkX, chunkZ, 5, 0, 256);
+			runGenerator(ore_end_platina, world, random, chunkX, chunkZ, 200, 0, 256);
 		}
 	}
 	
