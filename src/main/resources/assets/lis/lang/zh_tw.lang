@@ -1,0 +1,11 @@
+itemGroup.iridiumtab=銥資源
+
+item.prill_platina.name=鉑合金顆粒
+item.platina_190.name=銥-190
+item.iridium_191.name=銥-191
+item.iridium_193.name=銥-193
+item.complex_compound_iridium.name=複合銥化合物
+
+tile.ore_overworld_platina.name=鉑合金礦
+tile.ore_nether_platina.name=地獄鉑合金礦
+tile.ore_end_platina.name=終界鉑合金礦
