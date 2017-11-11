@@ -1,5 +1,7 @@
 package com.lavx64.iridiumsource.recipes;
 
+import java.util.List;
+
 import com.lavx64.iridiumsource.init.BlockInit;
 import com.lavx64.iridiumsource.init.ItemInit;
 
@@ -10,6 +12,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.fluids.FluidRegistry;
+import net.minecraftforge.fluids.FluidStack;
 
 public class RecipesIC2 {
 
@@ -23,8 +27,7 @@ public class RecipesIC2 {
      */
 
 
-    public static void addRecipes(){
-    	
+    public static void addRecipes(){    	
     	Block ore_end_platina = BlockInit.BLOCKS.get(0);
     	Block ore_overworld_platina = BlockInit.BLOCKS.get(1);
     	Block ore_nether_platina = BlockInit.BLOCKS.get(2);
@@ -66,18 +69,17 @@ public class RecipesIC2 {
     	Recipes.compressor.addRecipe(compressor_input, null, false, compressor_output);
     	//Compressor <COMPLEX_COMPOUND_IRIDIUM> : Iridium Shard
     	
-    //Testing code:
-    /*	ItemStack magma = new ItemStack(Item.getItemFromBlock(Block.getBlockFromName("magma")));
-    	IC2RecipeInput magmaBlock = new IC2RecipeInput(magma);
+    	IC2RecipeInput magmaBlock = new IC2RecipeInput(new ItemStack(Item.getItemFromBlock(Block.getBlockFromName("magma"))));
     	IC2RecipeInput cannerInput = new IC2RecipeInput(IC2Items.getItem("fluid_cell", "ic2pahoehoe_lava"));
     	ItemStack cannerOutput = IC2Items.getItem("fluid_cell", "lava");
+    	
     	Recipes.cannerBottle.addRecipe(cannerInput, magmaBlock, cannerOutput, false);
     	//Canning Machine <UniversalCell<Pahoehoe Lava>, MAGMA BLOCK> : UniversalCell<Lava>
     	
     	//TODO: Ask on forum about this deprecated function
     	Recipes.cannerEnrich.addRecipe(new FluidStack(FluidRegistry.getFluid("ic2pahoehoe_lava"), 1000), magmaBlock, new FluidStack(FluidRegistry.LAVA, 1000));
     	//Canning Machine <Pahoehoe Lava, MAGMA BLOCK> : Lava
-    * */
+    
     }
 
 }

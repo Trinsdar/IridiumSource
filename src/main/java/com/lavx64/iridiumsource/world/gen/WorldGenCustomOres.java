@@ -26,8 +26,6 @@ public class WorldGenCustomOres implements IWorldGenerator
 		ore_end_platina = new WorldGenMinable(BlockInit.ORE_END.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.PLATINA), 3, BlockMatcher.forBlock(Blocks.END_STONE));
 		ore_overworld_platina = new WorldGenMinable(BlockInit.ORE_OVERWORLD.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.PLATINA), 3, BlockMatcher.forBlock(Blocks.STONE));
 		ore_nether_platina = new WorldGenMinable(BlockInit.ORE_NETHER.getDefaultState().withProperty(BlockOres.VARIANT, EnumHandler.EnumType.PLATINA), 3, BlockMatcher.forBlock(Blocks.NETHERRACK));
-	//Testing code:
-	//	coal_block = new WorldGenMinable(Block.getBlockById(173).getDefaultState(), 20, BlockMatcher.forBlock(Blocks.NETHERRACK));
 	}
 	
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) 
@@ -36,8 +34,6 @@ public class WorldGenCustomOres implements IWorldGenerator
 		{
 		case -1:
 			runGenerator(ore_nether_platina, world, random, chunkX, chunkZ, 100, 0, 256);
-		//Testing code:
-		//	runGenerator(coal_block, world, random, chunkX, chunkZ, 15, 0, 256);
 			break;
 		case 0:
 			runGenerator(ore_overworld_platina, world, random, chunkX, chunkZ, 100, 0, 15);
