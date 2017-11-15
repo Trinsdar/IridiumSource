@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "iridiumsource:blocks/ore_end_platina"
+	}
+}

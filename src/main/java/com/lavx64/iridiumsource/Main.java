@@ -7,7 +7,7 @@ import com.lavx64.iridiumsource.util.Reference;
 import com.lavx64.iridiumsource.util.handlers.RegistryHandler;
 
 import net.minecraft.creativetab.CreativeTabs;
-
+import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -34,12 +34,13 @@ public class Main {
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		RegistryHandler.otherRegistries();
-		
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		RecipesIC2.addRecipes();
+        if (Loader.isModLoaded("ic2")) {
+            RecipesIC2.addRecipes();
+        }
 	}
 	
 	@EventHandler

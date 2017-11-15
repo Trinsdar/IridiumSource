@@ -1,0 +1,6 @@
+{
+	"variants":
+	{
+		"variant=platina": {"model": "iridiumsource:ore_overworld_platina"}
+	}
+}

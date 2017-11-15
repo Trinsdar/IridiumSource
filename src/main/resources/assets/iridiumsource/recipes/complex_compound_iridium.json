@@ -6,13 +6,13 @@
             "ore": "dustGold"
         },
         {
-        	"item": "lis:iridium_193"
+        	"item": "iridiumsource:iridium_193"
         },
         {
-        	"item": "lis:iridium_191"
+        	"item": "iridiumsource:iridium_191"
         }
     ],
     "result": {
-        "item": "lis:complex_compound_iridium"
+        "item": "iridiumsource:complex_compound_iridium"
     }
 }

@@ -68,17 +68,6 @@ public class RecipesIC2 {
     	
     	Recipes.compressor.addRecipe(compressor_input, null, false, compressor_output);
     	//Compressor <COMPLEX_COMPOUND_IRIDIUM> : Iridium Shard
-    	
-    	IC2RecipeInput magmaBlock = new IC2RecipeInput(new ItemStack(Item.getItemFromBlock(Block.getBlockFromName("magma"))));
-    	IC2RecipeInput cannerInput = new IC2RecipeInput(IC2Items.getItem("fluid_cell", "ic2pahoehoe_lava"));
-    	ItemStack cannerOutput = IC2Items.getItem("fluid_cell", "lava");
-    	
-    	Recipes.cannerBottle.addRecipe(cannerInput, magmaBlock, cannerOutput, false);
-    	//Canning Machine <UniversalCell<Pahoehoe Lava>, MAGMA BLOCK> : UniversalCell<Lava>
-    	
-    	//TODO: Ask on forum about this deprecated function
-    	Recipes.cannerEnrich.addRecipe(new FluidStack(FluidRegistry.getFluid("ic2pahoehoe_lava"), 1000), magmaBlock, new FluidStack(FluidRegistry.LAVA, 1000));
-    	//Canning Machine <Pahoehoe Lava, MAGMA BLOCK> : Lava
     
     }
 

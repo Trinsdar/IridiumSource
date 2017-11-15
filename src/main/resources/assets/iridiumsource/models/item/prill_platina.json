@@ -1,7 +1,7 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "lis:items/platina_190"
+		"layer0": "iridiumsource:items/prill_platina"
 	}
 	
 }
