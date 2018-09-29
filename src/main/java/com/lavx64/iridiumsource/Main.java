@@ -15,6 +15,10 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.common.config.Configuration;
+
+import java.io.File;
+import org.apache.logging.log4j.Logger;
 
 @Mod(modid = Reference.MODID,
 	 name = Reference.NAME,
@@ -29,11 +33,18 @@ public class Main {
 	@SidedProxy(clientSide = Reference.CLIENT,
 				serverSide = Reference.COMMON)
 	public static CommonProxy proxy;
-	
+
+	public static Configuration config;
+	public static Logger logger;
+
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
+		logger = event.getModLog();
 		RegistryHandler.otherRegistries();
+		File directory = event.getModConfigurationDirectory();
+		config = new Configuration(new File(directory.getPath(), "iridium_source.cfg"));
+		Config.readConfig();
 	}
 	@EventHandler
 	public void init(FMLInitializationEvent event)
@@ -46,7 +57,9 @@ public class Main {
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event)
 	{
-		
+		if (config.hasChanged()) {
+			config.save();
+		}
 		
 	}
 	

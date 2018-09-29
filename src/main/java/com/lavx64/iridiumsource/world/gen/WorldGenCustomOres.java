@@ -2,6 +2,7 @@ package com.lavx64.iridiumsource.world.gen;
 
 import java.util.Random;
 
+import com.lavx64.iridiumsource.Config;
 import com.lavx64.iridiumsource.init.BlockInit;
 import com.lavx64.iridiumsource.init.BlockOres;
 import com.lavx64.iridiumsource.util.handlers.EnumHandler;
@@ -33,13 +34,13 @@ public class WorldGenCustomOres implements IWorldGenerator
 		switch(world.provider.getDimension())
 		{
 		case -1:
-			runGenerator(ore_nether_platina, world, random, chunkX, chunkZ, 100, 0, 256);
+			runGenerator(ore_nether_platina, world, random, chunkX, chunkZ, Config.netherGenChance, Config.netherMinHeight, Config.netherMaxHeight);
 			break;
 		case 0:
-			runGenerator(ore_overworld_platina, world, random, chunkX, chunkZ, 100, 0, 15);
+			runGenerator(ore_overworld_platina, world, random, chunkX, chunkZ, Config.overworldGenChance, Config.overworldMinHeight, Config.overworldMaxHeight);
 			break;
 		case 1:
-			runGenerator(ore_end_platina, world, random, chunkX, chunkZ, 200, 0, 256);
+			runGenerator(ore_end_platina, world, random, chunkX, chunkZ, Config.endGenChance, Config.endMinHeight, Config.endMaxHeight);
 		}
 	}
 	
