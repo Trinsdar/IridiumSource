@@ -3,7 +3,7 @@ Simple mod that adds Platina Ore and a way to produce Iridium(IC2) without usele
 Only REAL METEORITE ORE PROCESSING.
 
 
-IC2 MOD IS NECESSARY, of course if you don't want to crash minecraft.
+I̶C̶2̶ ̶M̶O̶D̶ ̶I̶S̶ ̶N̶E̶C̶E̶S̶S̶A̶R̶Y̶,̶ ̶o̶f̶ ̶c̶o̶u̶r̶s̶e̶ ̶i̶f̶ ̶y̶o̶u̶ ̶d̶o̶n̶'̶t̶ ̶w̶a̶n̶t̶ ̶t̶o̶ ̶c̶r̶a̶s̶h̶ ̶m̶i̶n̶e̶c̶r̶a̶f̶t̶. That is wrong; it wil load but recipes won't work. If you want the ic2 recipes then you need ic2.
 
 
 Recipes
